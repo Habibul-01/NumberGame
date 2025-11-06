@@ -16,12 +16,16 @@ body {
 }
 
 footer {
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	background: black;
-	color: white;
-	padding: 6px 16px
+	position: fixed;       /* stay fixed on the screen */
+    bottom: 0px;             /* distance from the top */
+    left: 50%;             /* move to center horizontally */
+    transform: translateX(-50%); /* truly center it */
+    background: black;     
+    color: white;
+    padding: 5px 20px;    /* make it look like a button */
+    border-radius: 5px;    /* optional: rounded corners */
+    cursor: pointer;       /* optional: cursor pointer for button feel */
+    text-align: center;
 }
 </style>
 <body>
@@ -59,7 +63,8 @@ footer {
 	%>
 	<p>Game Over! You have used all attempts.</p>
 	
-	<form action="indec.html"></form>
+	<form action="index.html">
+	<button type="submit">Play Again</button></form>
 	<%
 	}
 	%>
