@@ -1,0 +1,14 @@
+# Use an official Java 21 runtime
+FROM eclipse-temurin:25-jdk
+
+# Set working directory
+WORKDIR /app
+
+# Copy project files
+COPY . .
+
+# Build your app (Maven example)
+RUN ./mvnw package -DskipTests
+
+# Run your app (adjust the jar file name)
+CMD ["java", "-jar", "target/myapp.jar"]

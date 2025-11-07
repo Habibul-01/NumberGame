@@ -24,6 +24,8 @@ public class gameservlet extends HttpServlet {
 		String message = null;
 		if (guessnumber == randomnumber) {
 			message = "🎉 Correct! The number was " + randomnumber + ".";
+		    int num=Integer.parseInt(request.getParameter("chance"));
+		    num=0;
 		} else if (guessnumber < randomnumber) {
 			message = "Your guess is going Low.";
 		} else {

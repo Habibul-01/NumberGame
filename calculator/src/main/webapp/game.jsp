@@ -43,9 +43,9 @@ footer {
 	boolean gameOver = (chance == 0);
 	%>
 	<form action="gameservlet" method="post">
-		<input type="number" name="num" id="num" required> <input
+		<input type="number" name="num" id="num" required <%= (gameOver) ? "disabled" : "" %>> <input
 			type="hidden" name="chance" value=<%=chance%>> <input
-			type="submit" value="Check">
+			type="submit" value="Check" <%= (gameOver) ? "disabled" : "" %>>
 	</form>
 	<%
 	if (message != null) {
