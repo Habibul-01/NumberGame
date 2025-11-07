@@ -1,0 +1,16 @@
+# Exported from Render on 2025-11-07T13:53:48Z
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: Number Game
+      runtime: docker
+      repo: https://github.com/Habibul-01/NumberGame
+      plan: free
+      region: singapore
+      dockerContext: .
+      dockerfilePath: ./Dockerfile
+      autoDeployTrigger: commit
