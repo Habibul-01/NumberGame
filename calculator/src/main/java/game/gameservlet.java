@@ -72,7 +72,6 @@ public class gameservlet extends HttpServlet {
 		} else if (chance == 0) {
 			message = "❌ Game Over! You ran out of chances. The number was " + randomnumber + ".";
 			gameover = true;
-			message = "🎉 Correct! The number was " + randomnumber + ".";
 		} else if (guessnumber < randomnumber) {
 			message = "Your guess is too low! Chances left: " + chance;
 		} else {
@@ -93,5 +92,6 @@ public class gameservlet extends HttpServlet {
 		String page = "level" + levels + ".jsp";
 		response.sendRedirect(page);
 	}
+
 
 }
